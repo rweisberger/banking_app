@@ -5,7 +5,7 @@ import {
   Routes, 
   Route
 } from "react-router-dom";
-import { UserContext } from "./components/context";
+import UserContext from "./components/context";
 import NavBar from "./components/navbar";
 import Home from "./components/home";
 import CreateAccount from "./components/createaccount";
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <HashRouter>
-      <UserProvider> 
+      <UserProvider>
         <NavBar/>
         <Routes>
           <Route path="/" exact element={<Home />} />
@@ -41,7 +41,7 @@ function App() {
         </Routes>
       </UserProvider>
     </HashRouter>
-);
+  );
 }
 
 export default App;

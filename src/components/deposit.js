@@ -1,5 +1,6 @@
 import React,  { useState, useContext } from "react";
-import { UserContext, Card } from "./context";
+import Card from "./card";
+import UserContext from "./context";
 
 function Deposit(){
     const [depositAmount, setDepositAmount] = useState(0)

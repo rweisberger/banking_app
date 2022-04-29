@@ -1,6 +1,5 @@
 import React,  { useState, useContext } from "react";
-import Card from "./card";
-import UserContext from "./context";
+import { UserContext, Card } from "./context";
 
 function Withdraw(){
     const [withdrawAmount, setWithdrawAmount] = useState(0);

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
-import UserContext from "./context";
+import { UserContext } from "./context";
 
 //useNavigate is routing the user back to the login page once they have logged out of their account through the Navbar button. 
 //useNavigate replaced useHistory- there are still many resources about useHistory even though it is out-of-date 
@@ -19,7 +19,6 @@ function NavBar(){
     return(
         <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            {/* SM: I would update the href to a link here */}
             <a className="navbar-brand px-3" href="#" data-toggle="tooltip" data-placement="bottom" title="Visit our homepage">BadBank</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

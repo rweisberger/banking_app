@@ -1,6 +1,5 @@
 import React,  { useState, useContext } from "react";
-import Card from "./card";
-import UserContext from "./context";
+import { UserContext, Card } from "./context";
 
 
 function CreateAccount(){
@@ -24,8 +23,6 @@ function CreateAccount(){
         }
         if(field === email){
             //The pattern below was take from https://www.w3schools.blog/email-validation-javascript-js
-            // SM: Yes, this is great! RegEx (Regular Expressions) are so weird to read/learn but very common
-            // No need to learn RegEx, perfectly ok to copy and paste things like this from online resources.
             var emailFormat = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
             if(field.match(emailFormat)){
                 return true
@@ -60,7 +57,7 @@ function CreateAccount(){
 
     return(
         <div className="container">
-            <Card
+            <Card 
                 bgcolor="info"
                 header="Create Account"
                 status={status}

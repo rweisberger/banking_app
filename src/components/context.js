@@ -1,7 +1,14 @@
 import React,  { createContext } from "react";
 
+// SM: this is the only place where we call createContext
 const UserContext = createContext(null);
 
+/*
+SM: I think this is leftover from the starter files, but the card logic could be moved to a separate file
+If you choose to do so, make sure to add the following to the end of the file:
+export default Card;
+And make sure to update your imports
+*/
 function Card(props){
     function classes(){
         const bg  = props.bgcolor ? ' bg-' + props.bgcolor : ' ';
@@ -25,6 +32,7 @@ function Card(props){
 
 }
 
+// SM: This is a great idea, I would recommend pulling this out into its own file as well
 // I want to style the alert
 // function ModalAlert(props){
 //     return(
@@ -49,4 +57,6 @@ function Card(props){
 //     )
 // }
 
+// SM: If you remove Card from this file, you would have to update the export to:
+// export default UserContext;
 export {UserContext, Card};

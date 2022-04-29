@@ -19,6 +19,7 @@ function NavBar(){
     return(
         <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            {/* SM: Could update the href here to the home page */}
             <a className="navbar-brand px-3" href="#" data-toggle="tooltip" data-placement="bottom" title="Visit our homepage">BadBank</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

@@ -39,6 +39,8 @@ function Login(){
                 header="Login"
                 body={!ctx.activeUser ? (
                     <>
+                    {/* SM: Same comment as deposit.js about no html tags wrapping this text, everything else looks great */}
+                    {/* SM: When you inspect the page in the console, <></> aka a Fragment is nothing (it's used to avoid having too many random divs wrapping components) */}
                     Email address<br/> 
                     <input type="email" className="form-control" id="email" placeholder="Enter email" value={loginEmail} onChange={e => setLoginEmail(e.currentTarget.value)}/><br/>
                     Password<br/> 

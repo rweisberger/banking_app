@@ -9,6 +9,7 @@ function Login(){
     const [open, setOpen] = useState(false);
     const ctx = useContext(UserContext);
 
+
     // button needs onClick to find user
     // use state to keep track of login status 
     // use ternary operator to display logout?

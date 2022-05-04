@@ -1,4 +1,6 @@
 import React,  { useState } from "react";
+import { AuthProvider } from "./components/Auth/authProvider";
+import RequireAuth from "./components/Auth/requireAuth";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   HashRouter,
@@ -32,17 +34,23 @@ function App() {
   return (
     <HashRouter>
       <UserContext.Provider value={context}> 
-        <NavBar/>
-        <Routes>
-          <Route path="/" exact element={<Home />} />
-          <Route path="/CreateAccount/" element={<CreateAccount />} />
-          <Route path="/login/" element={<Login />}/>
-          <Route path="/deposit/" element={<Deposit />}/>
-          <Route path="/withdraw/" element={<Withdraw />}/>
-          <Route path="/accountActivity/" element={<Transactions />} />
-          <Route path="/AllData/" element={<AllData />} />
-        </Routes>
-        </UserContext.Provider>
+        {/* <AuthProvider> */}
+          <NavBar/>
+          <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/CreateAccount/" element={<CreateAccount />} />
+            <Route path="/login/" element={<Login />}/>
+            {/* <Route path="/protected" element={ */}
+              {/* <RequireAuth> */}
+                <Route path="/deposit/" element={<Deposit />}/>
+                <Route path="/withdraw/" element={<Withdraw />}/>
+                <Route path="/accountActivity/" element={<Transactions />} />
+                <Route path="/AllData/" element={<AllData />} />
+              {/* </RequireAuth>} */}
+            {/* /> */}
+          </Routes>
+        {/* </AuthProvider> */}
+      </UserContext.Provider>
     </HashRouter>
 );
 }

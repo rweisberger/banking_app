@@ -56,6 +56,4 @@ function Withdraw(){
 }
 
 export default Withdraw;
-// problems: trying to add balance without using the ternary operator, error "cannot get property balance of undefined" and everything breaks. Need to have something to display when no user is logged in and when a user is logged in. 
 
-// need to reset form so that the input is zero and the balance updates 

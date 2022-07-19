@@ -18,7 +18,7 @@ jobs:
         env:
             CI: false
       - name: deploy
-      - uses: jakejarvis/s3-sync-action@master
+        uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
